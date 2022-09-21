@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
+  <title>Robot Telepresence</title>
+  <!-- Favicon-->
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet"
+    type="text/css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css" />
+
+  <!-- Bootstrap Core Css -->
+  <link href="plugins/bootstrap/css/bootstrap.css" rel="stylesheet" />
+
+  <!-- Waves Effect Css -->
+  <link href="plugins/node-waves/waves.css" rel="stylesheet" />
+
+  <!-- Animation Css -->
+  <link href="plugins/animate-css/animate.css" rel="stylesheet" />
+
+  <!-- Custom Css -->
+  <link href="css/style.css" rel="stylesheet" />
+
+  <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
+  <link href="css/themes/all-themes.css" rel="stylesheet" />
+</head>
+
+<body class="theme-red">
+  <!-- Page Loader -->
+  <div class="page-loader-wrapper">
+    <div class="loader">
+      <div class="preloader">
+        <div class="spinner-layer pl-red">
+          <div class="circle-clipper left">
+            <div class="circle"></div>
+          </div>
+          <div class="circle-clipper right">
+            <div class="circle"></div>
+          </div>
+        </div>
+      </div>
+      <p>Mohon tunggu...</p>
+    </div>
+  </div>
+  <!-- #END# Page Loader -->
+  <!-- Overlay For Sidebars -->
+  <div class="overlay"></div>
+  <!-- #END# Overlay For Sidebars -->
+  <!-- Search Bar -->
+  <div class="search-bar">
+    <div class="search-icon">
+      <i class="material-icons">cari</i>
+    </div>
+    <input type="text" placeholder="START TYPING..." />
+    <div class="close-search">
+      <i class="material-icons">tutup</i>
+    </div>
+  </div>
+  <!-- #END# Search Bar -->
+  <!-- Top Bar -->
+  <nav class="navbar">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a href="javascript:void(0);" class="navbar-toggle collapsed" data-toggle="collapse"
+          data-target="#navbar-collapse" aria-expanded="false"></a>
+        <a href="javascript:void(0);" class="bars"></a>
+        <a class="navbar-brand" href="index.html">ROBOT TELEPRESENCE</a>
+      </div>
+      <div class="collapse navbar-collapse" id="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <!-- Call Search -->
+          <li>
+            <a href="javascript:void(0);" class="js-search" data-close="true"><i class="material-icons">cari</i></a>
+          </li>
+          <!-- #END# Call Search -->
+
+          <li class="pull-right">
+            <a href="javascript:void(0);" class="js-right-sidebar" data-close="true"><i
+                class="material-icons">more_vert</i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- #Top Bar -->
+  <section>
+    <!-- Left Sidebar -->
+    <aside id="leftsidebar" class="sidebar">
+      <!-- User Info -->
+      <div class="user-info">
+        <div class="image">
+          <img src="images/user.png" width="48" height="48" alt="User" />
+        </div>
+        <div class="info-container">
+          <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Pengguna
+          </div>
+          <div class="email">pengguna@pengguna.com</div>
+          <div class="btn-group user-helper-dropdown">
+            <i class="material-icons" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="true">keyboard_arrow_down</i>
+            <ul class="dropdown-menu pull-right">
+              <li>
+                <a href="javascript:void(0);"><i class="material-icons">person</i>Profil</a>
+              </li>
+              <li role="separator" class="divider"></li>
+              <li>
+                <a href="javascript:void(0);"><i class="material-icons">input</i>Keluar</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- #User Info -->
+      <!-- Menu -->
+      <div class="menu">
+        <ul class="list">
+          <li class="header">Navigasi Utama</li>
+          <li>
+            <a href="javascript:void(0)" onclick="pose(0.0,0.0,0.0)">
+              <i class="material-icons">home</i>
+              <span>Home</span>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)" onclick="pose(2.0,0.0,0.)">
+              <!-- <i class="material-icons">video_call</i> -->
+              <span>Tenant 1</span>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)" onclick="pose(3.966,7.247,0.688)">
+              <!-- <i class="material-icons">video_call</i> -->
+              <span>Tenant 2</span>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)" onclick="pose(8.903,5.671,-0.035)">
+              <!-- <i class="material-icons">video_call</i> -->
+              <span>Tenant 3</span>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)" onclick="pose(4.997,3.457,-0.643)">
+              <!-- <i class="material-icons">video_call</i> -->
+              <span>Tenant 4</span>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)" onclick="pose(8.831,0.987,-0.044)">
+              <!-- <i class="material-icons">video_call</i> -->
+              <span>Tenant 5</span>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)" onclick="pose(4.114,0.685,0.737)">
+              <!-- <i class="material-icons">video_call</i> -->
+              <span>Tenant 6</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- #Menu -->
+      <!-- Footer -->
+      <div class="legal">
+        <div class="copyright">
+          &copy; 2021 <a href="javascript:void(0);">SARI Teknologi</a>.
+        </div>
+        <div class="version"><b>Versi: </b> 1.0.3</div>
+      </div>
+      <!-- #Footer -->
+    </aside>
+    <!-- #END# Left Sidebar -->
+    <!-- Right Sidebar -->
+    <aside id="rightsidebar" class="right-sidebar">
+      <ul class="nav nav-tabs tab-nav-right" role="tablist">
+        <li role="presentation">
+          <a href="#settings" data-toggle="tab">Pengaturan</a>
+        </li>
+      </ul>
+      <div class="tab-content"></div>
+    </aside>
+    <!-- #END# Right Sidebar -->
+  </section>
+
+  <section class="content">
+    <div class="container-fluid">
+      <!-- <div class="block-header">
+          <h2>CLIENT PAGE</h2>
+        </div> -->
+      <div class="row">
+        <div class="col-lg-8 col-md-8 col-sm-6 col-xs-12">
+          <div class="card">
+            <div class="body">
+              <p>
+              <div id="btnshow" class="wrapper" style="text-align: center;">
+                <button class="btn btn-success waves-effect" onclick="run()">
+                  Klik untuk mulai berinteraksi
+                </button>
+              </div>
+              </p>
+              <div id="call-frame-container"></div>
+              <script>
+                async function run() {
+                  room = { url: "https://clb.daily.co/clbrbt" };
+
+                  callFrame = window.DailyIframe.createFrame(
+                    document.getElementById("call-frame-container"),
+                    {
+                      showLeaveButton: true,
+                      iframeStyle: {
+                        border: "0px solid black",
+                        position: "inherit",
+                        top: 0,
+                        left: 0,
+                        width: "100%",
+                        height: "600px"
+                      }
+                    }
+                  );
+
+                  callFrame.join({ url: "https://clb.daily.co/clbrbt" });
+
+                  // join the room
+                  await callFrame.join({
+                    url: room.url,
+                    showLeaveButton: true
+                  });
+
+                  function leave(e) {
+                    showEvent(e);
+                    callFrame.destroy();
+                  }
+                }
+              </script>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+          <div class="card">
+            <div class="header">
+              <h2>
+                Navigasi<small>Status: <span id="status"></span></small>
+              </h2>
+            </div>
+            <div class="body">
+              
+
+              <!-- JOYSTICK -->
+              <div class="row my-4">
+                <div class="col-md-12">
+                  <div class="d-flex justify-content-center" style="width: 210px; height: 210px;">
+                    <div id="joystick" style="position: inherit;"></div>
+                  </div>
+                </div>
+              </div>
+			  
+			  <!-- SPEED -->
+			  <div class="row">
+                <div class="col-md-4"></div>
+                <div class=" col-md-4">
+                  <label for="robot-speed">
+                    <strong>Kecepatan Robot</strong>
+                  </label>
+                  <input type="range" min="15" max="80" class="custom-range" id="robot-speed">
+                </div>
+                <div class="col-md-4"></div>
+              </div> 
+			  <div class="row clearfix">
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                  <button type="button"
+                    class="btn bg-indigo btn-block btn-lg waves-effect joyjoy">Joystick</button>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                  <button type="button"
+                    class="btn bg-deep-purple btn-block btn-lg waves-effect keykey">Keyboard</button>
+                </div>
+              </div>
+              
+
+              <!-- INFO -->
+              <div class="row my-4">
+                <div class="col-md-12">
+                  <div class="alert alert-success">
+                    <h4 class="alert-heading">Telepresence interface demo</h4>
+                    <ul>
+                      <li>Gunakan joystik untuk bergerak</li>
+                      <li>Selalu gerak-gerakkan joystick agar robot tetap berjalan</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <hr>
+              <!-- Batas Garis Atas Tengah
+			  onmousedown="mousedown_dangak()" onmouseup="mouseup_dangak()"
+                    onmouseout="mouseup_dangak()" 
+					onmousedown="mousedown_nunduk()" onmouseup="mouseup_nunduk()"
+                    onmouseout="mouseup_nunduk()" 
+					-->
+              <div class="row clearfix">
+                <div class="col-md-12 text-center">
+                  <h5>Kamera</h5>
+                </div>
+              </div>
+              <div class="row clearfix">
+				<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+				</div>
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                  <button type="button" class="btn bg-cyan btn-block btn-lg waves-effect tengokatas">Tengok
+                    Atas</button>
+                </div>
+				<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+				</div>
+                
+              </div>
+              <div class="row clearfix">
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                  <button type="button"
+                    class="btn bg-cyan btn-block btn-lg waves-effect tengokkiri">Tengok
+                    Kiri</button>
+                </div>
+				<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                  <button type="button"
+                    class="btn bg-pink btn-block btn-lg waves-effect resetkamera">Reset</button>
+                </div>
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                  <button type="button"
+                    class="btn bg-cyan btn-block btn-lg waves-effect tengokkanan">Tengok
+                    Kanan</button>
+                </div>
+              </div>
+			  <div class="row clearfix">
+				<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+				</div>
+				<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                  <button type="button" class="btn bg-cyan btn-block btn-lg waves-effect tengokbawah">Tengok
+                    Bawah</button>
+                </div>
+				<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+				</div>
+			  </div>
+              <div class="row clearfix">
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                  <button type="button"
+                    class="btn bg-teal btn-block btn-lg waves-effect naik">Naik</button>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                  <button ype="button"
+                    class="btn bg-teal btn-block btn-lg waves-effect turun">Turun</button>
+                </div>
+              </div>
+              <hr>
+              <!-- Batas Garis Tengah Bawah -->
+              
+            </div> <!-- card -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Call Js-->
+  <script crossorigin src="https://unpkg.com/@daily-co/daily-js"></script>
+
+  <!-- Jquery Core Js -->
+  <script src="plugins/jquery/jquery.min.js"></script>
+
+  <!-- Bootstrap Core Js -->
+  <script src="plugins/bootstrap/js/bootstrap.js"></script>
+
+  <!-- Select Plugin Js -->
+  <script src="plugins/bootstrap-select/js/bootstrap-select.js"></script>
+
+  <!-- Slimscroll Plugin Js -->
+  <script src="plugins/jquery-slimscroll/jquery.slimscroll.js"></script>
+
+  <!-- Waves Effect Plugin Js -->
+  <script src="plugins/node-waves/waves.js"></script>
+
+  <!-- Custom Js -->
+  <script src="js/admin.js"></script>
+
+  <!-- Demo Js -->
+  <script src="js/demo.js"></script>
+  
+  <script src="js/eventemitter2.js"></script>
+  <script src="https://static.robotwebtools.org/roslibjs/current/roslib.js"></script>
+  <script src="js/keyboardteleop.js"></script>
+  
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/nipplejs/0.7.3/nipplejs.js"></script>
+  <script src="//yoannmoinet.github.io/nipplejs/javascripts/nipplejs.js"></script>
+
+  <script type="text/javascript" type="text/javascript">
+	const tengokatas = document.querySelector('.tengokatas');
+	const tengokbawah = document.querySelector('.tengokbawah');
+	const tengokkiri = document.querySelector('.tengokkiri');
+	const tengokkanan = document.querySelector('.tengokkanan');
+	const naik = document.querySelector('.naik');
+	const turun = document.querySelector('.turun');
+	const resetkamera = document.querySelector('.resetkamera');
+	const joyjoy = document.querySelector('.joyjoy');
+	const keykey = document.querySelector('.keykey');
+	
+    var ros = new ROSLIB.Ros({
+      url: "wss://telepresence.site/wss/"
+    });
+
+    ros.on("connection", function () {
+      document.getElementById("status").innerHTML = "Terhubung";
+    });
+
+    ros.on("error", function (error) {
+      document.getElementById("status").innerHTML = "Error";
+    });
+
+    ros.on("close", function () {
+      document.getElementById("status").innerHTML = "Terputus";
+    });
+
+    var txt_listener = new ROSLIB.Topic({
+      ros: ros,
+      name: "/move_base_simple/goal",
+      messageType: "geometry_msgs/PoseStamped"
+    });
+
+    txt_listener.subscribe(function (m) {
+      document.getElementById("msg").innerHTML = m.data;
+      //move(1, 0);
+    });
+
+    serial_listener = new ROSLIB.Topic({
+      ros: ros,
+      name: "/kepala",
+      messageType: "std_msgs/String"
+    });
+	
+	joyjoy.addEventListener('pointerdown', (event) => {
+	  matikanTeleop();
+	  document.getElementById("robot-speed").disabled = true;
+	  //document.getElementById("joystick").disabled = false;
+	  createJoystick();
+	});
+	
+	keykey.addEventListener('pointerdown', (event) => {
+	  hidupkanTeleop();
+	  document.getElementById("robot-speed").disabled = false;
+	  //document.getElementById("joystick").disabled = true;
+	  manager.destroy();
+	  manager == null;
+	});
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //                                                Pergerakan Kamera
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // servo1 dangak ========= DANGAK ========== ==========================================================================================
+	var toggle_dangak = -1;
+	tengokatas.addEventListener('pointerdown', (event) => {
+	  console.log('bergerak tengok atas');
+	  if (toggle_dangak == -1)
+        toggle_dangak = setInterval(dangak_topic, 100 /*execute every 100ms*/);
+	});
+	
+	tengokatas.addEventListener('pointerup', (event) => {
+	  console.log('berhenti tengok atas');
+	  if (toggle_dangak != -1) {  //Only stop if exists
+        clearInterval(toggle_dangak);
+        toggle_dangak = -1;
+      }
+	});
+	
+    // ========== Send Topic ==========
+    function dangak_topic() {
+      let isi = "dangak\n"
+      var msg = new ROSLIB.Message({
+        data: isi
+      });
+      console.log(msg);
+      serial_listener.publish(msg);
+    }
+
+    // mup_ser1_headleft ========== NUNDUK ==========
+	var toggle_nunduk = -1;
+	tengokbawah.addEventListener('pointerdown', (event) => {
+	  console.log('bergerak tengok atas');
+	  if (toggle_nunduk == -1)
+        toggle_nunduk = setInterval(nunduk_topic, 100 /*execute every 100ms*/);
+	});
+	
+	tengokbawah.addEventListener('pointerup', (event) => {
+	  console.log('berhenti tengok atas');
+	  if (toggle_nunduk != -1) {  //Only stop if exists
+        clearInterval(toggle_nunduk);
+        toggle_nunduk = -1;
+      }
+	});
+	
+    // ========== Send Topic ==========
+    function nunduk_topic() {
+      let isi = "nunduk\n"
+      var msg = new ROSLIB.Message({
+        data: isi
+      });
+      console.log(msg);
+      serial_listener.publish(msg);
+    }
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //                                                Pergerakan Layar
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // ser2_headleft ========== TENGOK KIRI ========== ====================================================================================
+	var toggle_layarkiri = -1;
+	tengokkiri.addEventListener('pointerdown', (event) => {
+	  console.log('bergerak tengok kiri');
+	  if (toggle_layarkiri == -1)
+        toggle_layarkiri = setInterval(layarkiri_topic, 100 /*execute every 100ms*/);
+	});
+	
+	tengokkiri.addEventListener('pointerup', (event) => {
+	  console.log('berhenti tengok kiri');
+	  if (toggle_layarkiri != -1) {  //Only stop if exists
+        clearInterval(toggle_layarkiri);
+        toggle_layarkiri = -1;
+      }
+	});
+
+    // ========== Send Topic ==========
+    function layarkiri_topic() {
+      let isi = "layarkiri\n"
+      var msg = new ROSLIB.Message({
+        data: isi
+      });
+      console.log(msg);
+      serial_listener.publish(msg);
+    }
+
+    // ser2_headright ========== TENGOK KANAN ==========
+    var toggle_layarkanan = -1;
+	tengokkanan.addEventListener('pointerdown', (event) => {
+	  console.log('bergerak tengok kanan');
+	  if (toggle_layarkanan == -1)
+        toggle_layarkanan = setInterval(layarkanan_topic, 100 /*execute every 100ms*/);
+	});
+	
+	tengokkanan.addEventListener('pointerup', (event) => {
+	  console.log('berhenti tengok kanan');
+	  if (toggle_layarkanan != -1) {  //Only stop if exists
+        clearInterval(toggle_layarkanan);
+        toggle_layarkanan = -1;
+      }
+	});
+
+    // ========== Send Topic ==========
+    function layarkanan_topic() {
+      let isi = "layarkanan\n"
+      var msg = new ROSLIB.Message({
+        data: isi
+      });
+      console.log(msg);
+      serial_listener.publish(msg);
+    }
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //                                                Pergerakan Tinggi Badan
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // naik ========= Send Topic NAIK ========== ==========================================================================================
+	naik.addEventListener('pointerdown', (event) => {
+	  console.log('bergerak naik');
+	  let isi = "naik\n"
+      var msg = new ROSLIB.Message({
+        data: isi
+      });
+      console.log(msg);
+      serial_listener.publish(msg);
+	});
+	
+	naik.addEventListener('pointerup', (event) => {
+	  console.log('berhenti naik');
+	  let isi = "stop\n"
+      var msg = new ROSLIB.Message({
+        data: isi
+      });
+      console.log(msg);
+      serial_listener.publish(msg);
+	});
+
+    // turun ========= Send Topic TURUN ========== ==========================================================================================
+	turun.addEventListener('pointerdown', (event) => {
+	  console.log('bergerak turun');
+	  let isi = "turun\n"
+      var msg = new ROSLIB.Message({
+        data: isi
+      });
+      console.log(msg);
+      serial_listener.publish(msg);
+	});
+	
+	turun.addEventListener('pointerup', (event) => {
+	  console.log('berhenti turun');
+	  let isi = "stop\n"
+      var msg = new ROSLIB.Message({
+        data: isi
+      });
+      console.log(msg);
+      serial_listener.publish(msg);
+	});
+    
+	///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //                                                Reset Ke Tengah
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // reset ========= Send Topic RESET ========== ==========================================================================================
+	resetkamera.addEventListener('pointerdown', (event) => {
+	  console.log('Kembali ke tengah');
+	  let isi = "resetkamera\nresetlayar\n"
+      var msg = new ROSLIB.Message({
+        data: isi
+      });
+      console.log(msg);
+      serial_listener.publish(msg);
+	});
+	
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //                                                Pergerakan Robot Dengan Tombol Manual
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // forwardLeft ========= MAJU KIRI ========== =========================================================================================
+    var toggle_forwardLeft = -1;
+    function mousedown_forwardLeft(event) {
+      forwardLeft_topic()
+    }
+
+    function mouseup_forwardLeft(event) {
+      stop_topic()
+    }
+    // ========== Send Topic ==========
+    function forwardLeft_topic() {
+      let isi = "majukiri\n"
+      var msg = new ROSLIB.Message({
+        data: isi
+      });
+      console.log(msg);
+      serial_listener.publish(msg);
+    }
+
+    // forward ========= MAJU ========== ================================================================================================
+    var toggle_forward = -1;
+    function mousedown_forward(event) {
+      forward_topic()
+    }
+
+    function mouseup_forward(event) {
+      stop_topic()
+    }
+    // ========== Send Topic ==========
+    function forward_topic() {
+      let isi = "maju\n"
+      var msg = new ROSLIB.Message({
+        data: isi
+      });
+      console.log(msg);
+      serial_listener.publish(msg);
+    }
+
+    // forwardRight ========= MAJU KANAN ========== ======================================================================================
+    var toggle_forwardRight = -1;
+    function mousedown_forwardRight(event) {
+      forwardRight_topic()
+    }
+
+    function mouseup_forwardRight(event) {
+      stop_topic()
+    }
+    // ========== Send Topic ==========
+    function forwardRight_topic() {
+      let isi = "majukanan\n"
+      var msg = new ROSLIB.Message({
+        data: isi
+      });
+      console.log(msg);
+      serial_listener.publish(msg);
+    }
+
+    // turnLeft ========= BELOK KIRI ========== ===========================================================================================
+    var toggle_turnLeft = -1;
+    function mousedown_turnLeft(event) {
+      turnLeft_topic()
+    }
+
+    function mouseup_turnLeft(event) {
+      stop_topic()
+	}
+    // ========== Send Topic ==========
+    function turnLeft_topic() {
+      let isi = "kekiri\n"
+      var msg = new ROSLIB.Message({
+        data: isi
+      });
+      console.log(msg);
+      serial_listener.publish(msg);
+    }
+
+    // stop ========= BERHENTI ========== ================================================================================================
+    var toggle_stop = -1;
+    function mousedown_stop(event) {
+      stop_topic()
+    }
+
+    function mouseup_stop(event) {
+      stop_topic()
+    }
+    // ========== Send Topic ==========
+    function stop_topic() {
+      let isi = "motorberhenti\n"
+      var msg = new ROSLIB.Message({
+        data: isi
+      });
+      console.log(msg);
+      serial_listener.publish(msg);
+    }
+
+    // turnRight ========= BELOK KANAN ========== ===========================================================================================
+    var toggle_turnRight = -1;
+    function mousedown_turnRight(event) {
+      turnRight_topic()
+    }
+
+    function mouseup_turnRight(event) {
+      stop_topic()
+    }
+    // ========== Send Topic ==========
+    function turnRight_topic() {
+      let isi = "kekanan\n"
+      var msg = new ROSLIB.Message({
+        data: isi
+      });
+      console.log(msg);
+      serial_listener.publish(msg);
+    }
+
+    // backwardLeft ========= MUNDUR KIRI ========== ==========================================================================================
+    var toggle_backwardLeft = -1;
+    function mousedown_backwardLeft(event) {
+      backwardLeft_topic()
+    }
+
+    function mouseup_backwardLeft(event) {
+      stop_topic()
+    }
+    // ========== Send Topic ==========
+    function backwardLeft_topic() {
+      let isi = "mundurkiri\n"
+      var msg = new ROSLIB.Message({
+        data: isi
+      });
+      console.log(msg);
+      serial_listener.publish(msg);
+    }
+
+    // backward ========= MUNDUR ========== ================================================================================================
+    var toggle_backward = -1;
+    function mousedown_backward(event) {
+      backward_topic()
+    }
+
+    function mouseup_backward(event) {
+      stop_topic()
+    }
+    // ========== Send Topic ==========
+    function backward_topic() {
+      let isi = "mundur\n"
+      var msg = new ROSLIB.Message({
+        data: isi
+      });
+      console.log(msg);
+      serial_listener.publish(msg);
+    }
+
+    // backwardRight ========= MUNDUR KANAN ========== ======================================================================================
+    var toggle_backwardRight = -1;
+    function mousedown_backwardRight(event) {
+      backwardRight_topic()
+    }
+
+    function mouseup_backwardRight(event) {
+      stop_topic()
+    }
+    // ========== Send Topic ==========
+    function backwardRight_topic() {
+      let isi = "mundurkanan\n"
+      var msg = new ROSLIB.Message({
+        data: isi
+      });
+      console.log(msg);
+      serial_listener.publish(msg);
+    }
+
+    // ======== BATAS SUCI ========
+    var move_base_listener = new ROSLIB.Topic({
+      ros: ros,
+      name: "/move_base_simple/goal",
+      messageType: "geometry_msgs/PoseStamped"
+    });
+
+    function pose(sx, sy, sz) {
+      var PoseStamped = new ROSLIB.Message({
+        header: {
+          //stamp: now,
+          frame_id: "map"
+        },
+        pose: {
+          position: {
+            x: sx,
+            y: sy,
+            z: sz
+          },
+          orientation: {
+            w: 1.0
+          }
+        }
+      });
+      move_base_listener.publish(PoseStamped);
+    }
+
+    //========== ========= ============
+
+
+    var twist;
+    var cmdVel;
+    var publishImmidiately = true;
+    var manager;
+    var teleop;
+    var ros;
+
+    function moveAction(linear, angular) {
+      if (linear !== undefined && angular !== undefined) {
+        twist.linear.x = linear;
+        twist.angular.z = angular;
+      } else {
+        twist.linear.x = 0;
+        twist.angular.z = 0;
+      }
+      cmdVel.publish(twist);
+    }
+
+    function initVelocityPublisher() {
+      // Init message with zero values.
+      twist = new ROSLIB.Message({
+        linear: {
+          x: 0,
+          y: 0,
+          z: 0
+        },
+        angular: {
+          x: 0,
+          y: 0,
+          z: 0
+        }
+      });
+      // Init topic object
+      cmdVel = new ROSLIB.Topic({
+        ros: ros,
+        name: '/cmd_vel',
+        messageType: 'geometry_msgs/Twist'
+      });
+      // Register publisher within ROS system
+      cmdVel.advertise();
+    }
+
+    function initTeleopKeyboard() {
+      // Use w, s, a, d keys to drive your robot
+
+      // Check if keyboard controller was aready created
+      if (teleop == null) {
+        // Initialize the teleop.
+        teleop = new KEYBOARDTELEOP.Teleop({
+          ros: ros,
+          topic: '/cmd_vel'
+        });
+      }
+
+      // Add event listener for slider moves
+      robotSpeedRange = document.getElementById("robot-speed");
+      robotSpeedRange.oninput = function () {
+        teleop.scale = robotSpeedRange.value / 100
+      }
+    }
+	
+	function hidupkanTeleop() {
+		if (teleop == null) {
+        // Initialize the teleop.
+        teleop = new KEYBOARDTELEOP.Teleop({
+          ros: ros,
+          topic: '/cmd_vel'
+        });
+      }
+	}
+	
+	function matikanTeleop() {
+		teleop == null
+	}
+
+    function createJoystick() {
+      // Check if joystick was aready created
+      if (manager == null) {
+        joystickContainer = document.getElementById('joystick');
+        // joystck configuration, if you want to adjust joystick, refer to:
+        // https://yoannmoinet.github.io/nipplejs/
+        var options = {
+          zone: joystickContainer,
+          position: { left: 50 + '%', top: 105 + 'px' },
+          mode: 'static',
+          size: 200,
+          color: '#0066ff',
+          restJoystick: true
+        };
+        manager = nipplejs.create(options);
+        // event listener for joystick move
+        manager.on('move', function (evt, nipple) {
+          // nipplejs returns direction is screen coordiantes
+          // we need to rotate it, that dragging towards screen top will move robot forward
+          var direction = nipple.angle.degree - 90;
+          if (direction > 180) {
+            direction = -(450 - nipple.angle.degree);
+          }
+          // convert angles to radians and scale linear and angular speed
+          // adjust if youwant robot to drvie faster or slower
+          var lin = Math.cos(direction / 57.29) * nipple.distance * 0.005;
+          var ang = Math.sin(direction / 57.29) * nipple.distance * 0.05;
+          // nipplejs is triggering events when joystic moves each pixel
+          // we need delay between consecutive messege publications to 
+          // prevent system from being flooded by messages
+          // events triggered earlier than 50ms after last publication will be dropped 
+          if (publishImmidiately) {
+            publishImmidiately = false;
+            moveAction(lin, ang);
+            setTimeout(function () {
+              publishImmidiately = true;
+            }, 50);
+          }
+        });
+        // event litener for joystick release, always send stop message
+        manager.on('end', function () {
+          moveAction(0, 0);
+        });
+      }
+    }
+
+    window.onload = function () {
+        // joystick and keyboard controls will be available only when document is correctly loaded
+        initVelocityPublisher();
+
+        initTeleopKeyboard();
+		matikanTeleop();
+
+        createJoystick();
+    };
+  </script>
+</body>
+
+</html>

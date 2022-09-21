@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+      name="viewport"
+    />
+    <title>Telepresence Robot Interface</title>
+    <!-- Favicon-->
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!-- Bootstrap Core Css -->
+    <link href="plugins/bootstrap/css/bootstrap.css" rel="stylesheet" />
+
+    <!-- Waves Effect Css -->
+    <link href="plugins/node-waves/waves.css" rel="stylesheet" />
+
+    <!-- Animation Css -->
+    <link href="plugins/animate-css/animate.css" rel="stylesheet" />
+
+    <!-- Custom Css -->
+    <link href="css/style.css" rel="stylesheet" />
+
+    <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
+    <link href="css/themes/all-themes.css" rel="stylesheet" />
+  </head>
+
+  <body class="theme-red">
+    <!-- Page Loader -->
+    <div class="page-loader-wrapper">
+      <div class="loader">
+        <div class="preloader">
+          <div class="spinner-layer pl-red">
+            <div class="circle-clipper left">
+              <div class="circle"></div>
+            </div>
+            <div class="circle-clipper right">
+              <div class="circle"></div>
+            </div>
+          </div>
+        </div>
+        <p>Please wait...</p>
+      </div>
+    </div>
+    <!-- #END# Page Loader -->
+    <!-- Overlay For Sidebars -->
+    <div class="overlay"></div>
+    <!-- #END# Overlay For Sidebars -->
+    <!-- Search Bar -->
+    <div class="search-bar">
+      <div class="search-icon">
+        <i class="material-icons">search</i>
+      </div>
+      <input type="text" placeholder="START TYPING..." />
+      <div class="close-search">
+        <i class="material-icons">close</i>
+      </div>
+    </div>
+    <!-- #END# Search Bar -->
+    <!-- Top Bar -->
+    <nav class="navbar">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a
+            href="javascript:void(0);"
+            class="navbar-toggle collapsed"
+            data-toggle="collapse"
+            data-target="#navbar-collapse"
+            aria-expanded="false"
+          ></a>
+          <a href="javascript:void(0);" class="bars"></a>
+          <a class="navbar-brand" href="index.html">TELEPRESENCE ROBOT</a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <!-- Call Search -->
+            <li>
+              <a href="javascript:void(0);" class="js-search" data-close="true"
+                ><i class="material-icons">search</i></a
+              >
+            </li>
+            <!-- #END# Call Search -->
+
+            <li class="pull-right">
+              <a
+                href="javascript:void(0);"
+                class="js-right-sidebar"
+                data-close="true"
+                ><i class="material-icons">more_vert</i></a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- #Top Bar -->
+    <section>
+      <!-- Left Sidebar -->
+      <aside id="leftsidebar" class="sidebar">
+        <!-- User Info -->
+        <div class="user-info">
+          <div class="image">
+            <img src="images/user.png" width="48" height="48" alt="User" />
+          </div>
+          <div class="info-container">
+            <div
+              class="name"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Pengguna
+            </div>
+            <div class="email">pengguna@pengguna.com</div>
+            <div class="btn-group user-helper-dropdown">
+              <i
+                class="material-icons"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="true"
+                >keyboard_arrow_down</i
+              >
+              <ul class="dropdown-menu pull-right">
+                <li>
+                  <a href="javascript:void(0);"
+                    ><i class="material-icons">person</i>Profile</a
+                  >
+                </li>
+                <li role="separator" class="divider"></li>
+                <li>
+                  <a href="javascript:void(0);"
+                    ><i class="material-icons">input</i>Sign Out</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- #User Info -->
+        <!-- Menu -->
+        <div class="menu">
+          <ul class="list">
+            <li class="header">MAIN NAVIGATION</li>
+            <li>
+              <a href="javascript:void(0)" onclick="pose(0.0,0.0,0.0)">
+                <i class="material-icons">home</i>
+                <span>Home</span>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0)" onclick="pose(0.324,4.966,0.989)">
+                <!-- <i class="material-icons">video_call</i> -->
+                <span>Renault</span>
+              </a>
+            </li>
+			<li>
+              <a href="javascript:void(0)" onclick="pose(3.966,7.247,0.688)">
+                <!-- <i class="material-icons">video_call</i> -->
+                <span>Iveco</span>
+              </a>
+            </li>
+			<li>
+              <a href="javascript:void(0)" onclick="pose(8.903,5.671,-0.035)">
+                <!-- <i class="material-icons">video_call</i> -->
+                <span>Man</span>
+              </a>
+            </li>
+			<li>
+              <a href="javascript:void(0)" onclick="pose(4.997,3.457,-0.643)">
+                <!-- <i class="material-icons">video_call</i> -->
+                <span>Scania</span>
+              </a>
+            </li>
+			<li>
+              <a href="javascript:void(0)" onclick="pose(8.831,0.987,-0.044)">
+                <!-- <i class="material-icons">video_call</i> -->
+                <span>Volvo</span>
+              </a>
+            </li>
+			<li>
+              <a href="javascript:void(0)" onclick="pose(4.114,0.685,0.737)">
+                <!-- <i class="material-icons">video_call</i> -->
+                <span>Mercedes Benz</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- #Menu -->
+        <!-- Footer -->
+        <div class="legal">
+          <div class="copyright">
+            &copy; 2021 <a href="javascript:void(0);">SARI Teknologi</a>.
+          </div>
+          <div class="version"><b>Version: </b> 1.0.1</div>
+        </div>
+        <!-- #Footer -->
+      </aside>
+      <!-- #END# Left Sidebar -->
+      <!-- Right Sidebar -->
+      <aside id="rightsidebar" class="right-sidebar">
+        <ul class="nav nav-tabs tab-nav-right" role="tablist">
+          <li role="presentation">
+            <a href="#settings" data-toggle="tab">SETTINGS</a>
+          </li>
+        </ul>
+        <div class="tab-content"></div>
+      </aside>
+      <!-- #END# Right Sidebar -->
+    </section>
+
+    <section class="content">
+      <div class="container-fluid">
+        <div class="block-header">
+          <h2>CLIENT PAGE</h2>
+        </div>
+        <div class="row">
+          <div class="col-lg-8 col-md-8 col-sm-6 col-xs-12">
+            <div class="card">
+              <div class="body">
+                <p>
+                    <div id="btnshow" class="wrapper" style="text-align: center;">
+                    <button class="btn btn-success waves-effect" onclick="run()">
+                    Click to start communicate
+                    </button>
+                    </div>
+                </p>
+                <div id="call-frame-container"></div>
+                <script>
+                  async function run() {
+                    room = { url: "https://clb.daily.co/clbrbt" };
+
+                    callFrame = window.DailyIframe.createFrame(
+                      document.getElementById("call-frame-container"),
+                      {
+                        showLeaveButton: true,
+                        iframeStyle: {
+                          border: "0px solid black",
+                          position: "inherit",
+                          top: 0,
+                          left: 0,
+                          width: "100%",
+                          height: "600px"
+                        }
+                      }
+                    );
+
+                    callFrame.join({ url: "https://clb.daily.co/clbrbt" });
+
+                    // join the room
+                    await callFrame.join({
+                      url: room.url,
+                      showLeaveButton: true
+                    });
+
+                    function leave(e) {
+                      showEvent(e);
+                      callFrame.destroy();
+                    }
+                  }
+                </script>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+            <div class="card">
+              <div class="header">
+                <h2>
+                  Navigation<small>Connection status: <span id="status"></span></small>
+                </h2>
+              </div>
+              <div class="body">
+                <div class="row clearfix">
+                    <br><br><br><br><div id="zone_joystick" style="position: inherit; height: 100px;"></div>
+                </div>  
+                <div class="row clearfix">
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <button id="ser1" onmousedown="md_ser1_up()"  onmouseup="mup_ser1_up()"  onmouseout="mup_ser1_up()" type="button" class="btn bg-blue btn-block btn-lg waves-effect">Servo Naik</button>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <button id="ser2" onmousedown="md_ser1_down()"  onmouseup="mup_ser1_down()"  onmouseout="mup_ser1_down()" type="button" class="btn bg-blue btn-block btn-lg waves-effect">Servo Turun</button>
+                    </div>
+                </div>
+                <div class="row clearfix">
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <button id="ser3" type="button" class="btn bg-blue btn-block btn-lg waves-effect">Servo Kiri</button>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <button id="ser4" type="button" class="btn bg-teal btn-block btn-lg waves-effect">Servo Kanan</button>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Video Call Js-->
+    <script crossorigin src="https://unpkg.com/@daily-co/daily-js"></script>
+
+    <!-- Jquery Core Js -->
+    <script src="plugins/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core Js -->
+    <script src="plugins/bootstrap/js/bootstrap.js"></script>
+
+    <!-- Select Plugin Js -->
+    <script src="plugins/bootstrap-select/js/bootstrap-select.js"></script>
+
+    <!-- Slimscroll Plugin Js -->
+    <script src="plugins/jquery-slimscroll/jquery.slimscroll.js"></script>
+
+    <!-- Waves Effect Plugin Js -->
+    <script src="plugins/node-waves/waves.js"></script>
+
+    <!-- Custom Js -->
+    <script src="js/admin.js"></script>
+
+    <!-- Demo Js -->
+    <script src="js/demo.js"></script>
+
+    <script
+      type="text/javascript"
+      src="https://static.robotwebtools.org/roslibjs/current/roslib.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/nipplejs/0.7.3/nipplejs.js"
+    ></script>
+
+    <script type="text/javascript" type="text/javascript">
+        var ros = new ROSLIB.Ros({
+          url: "wss://telepresence.site/wss/"
+        });
+  
+        ros.on("connection", function() {
+          document.getElementById("status").innerHTML = "Connected";
+        });
+  
+        ros.on("error", function(error) {
+          document.getElementById("status").innerHTML = "Error";
+        });
+  
+        ros.on("close", function() {
+          document.getElementById("status").innerHTML = "Closed";
+        });
+  
+        var txt_listener = new ROSLIB.Topic({
+          ros: ros,
+          name: "/move_base_simple/goal",
+          messageType: "geometry_msgs/PoseStamped"
+        });
+  
+        txt_listener.subscribe(function(m) {
+          document.getElementById("msg").innerHTML = m.data;
+          //move(1, 0);
+        });
+		
+		servo1_listener = new ROSLIB.Topic({
+          ros: ros,
+          name: "/servo1",
+          messageType: "std_msgs/String"
+        });
+		
+		// ser1 up
+		var mdID_up_ser1_up = -1;  
+		function md_ser1_up(event1) {
+		  if(mdID_up_ser1_up==-1)  
+			 mdID_up_ser1_up = setInterval(whilemd_ser1_up, 100 /*execute every 100ms*/);
+
+		}
+		function mup_ser1_up(event1) {
+		   if(mdID_up_ser1_up!=-1) {  //Only stop if exists
+			 clearInterval(mdID_up_ser1_up);
+			 mdID_up_ser1_up=-1;
+		   }
+
+		}
+		function whilemd_ser1_up() {
+			let isi = "naik"
+		    var msg = new ROSLIB.Message({
+				data: isi
+			});
+			console.log(msg);
+			servo1_listener.publish(msg);
+		}
+		
+		// ser1 down
+		var mdID_up_ser1_down = -1;  
+		function md_ser1_down(event2) {
+		  if(mdID_up_ser1_down==-1)  
+			 mdID_up_ser1_down = setInterval(whilemd_ser1_down, 100 /*execute every 100ms*/);
+
+		}
+		function mup_ser1_down(event2) {
+		   if(mdID_up_ser1_down!=-1) {  //Only stop if exists
+			 clearInterval(mdID_up_ser1_down);
+			 mdID_up_ser1_down=-1;
+		   }
+
+		}
+		function whilemd_ser1_down() {
+			let isi = "turun"
+		    var msg = new ROSLIB.Message({
+				data: isi
+			});
+			console.log(msg);
+			servo1_listener.publish(msg);
+		}
+		
+        cmd_vel_listener = new ROSLIB.Topic({
+          ros: ros,
+          name: "/cmd_vel",
+          messageType: "geometry_msgs/Twist"
+        });
+  
+        move = function(linear, angular) {
+          var twist = new ROSLIB.Message({
+            linear: {
+              x: linear,
+              y: 0,
+              z: 0
+            },
+            angular: {
+              x: 0,
+              y: 0,
+              z: angular
+            }
+          });
+          cmd_vel_listener.publish(twist);
+        };
+  
+        createJoystick = function() {
+          var options = {
+            zone: document.getElementById("zone_joystick"),
+            threshold: 0.1,
+            position: { left: 50 + "%" },
+            mode: "static",
+            size: 150,
+            color: "#000000"
+          };
+          manager = nipplejs.create(options);
+  
+          linear_speed = 0;
+          angular_speed = 0;
+  
+          manager.on("start", function(event, nipple) {
+            timer = setInterval(function() {
+              move(linear_speed, angular_speed);
+            }, 25);
+          });
+  
+          manager.on("move", function(event, nipple) {
+            max_linear = 5.0; // m/s
+            max_angular = 2.0; // rad/s
+            max_distance = 75.0; // pixels;
+            linear_speed =
+              (Math.sin(nipple.angle.radian) * max_linear * nipple.distance) /
+              max_distance;
+            angular_speed =
+              (-Math.cos(nipple.angle.radian) * max_angular * nipple.distance) /
+              max_distance;
+          });
+  
+          manager.on("end", function() {
+            if (timer) {
+              clearInterval(timer);
+            }
+            self.move(0, 0);
+          });
+        };
+        window.onload = function() {
+          createJoystick();
+        };
+  
+        var move_base_listener = new ROSLIB.Topic({
+          ros: ros,
+          name: "/move_base_simple/goal",
+          messageType: "geometry_msgs/PoseStamped"
+        });
+  
+        function pose(sx, sy, sz) {
+          var PoseStamped = new ROSLIB.Message({
+            header: {
+              //stamp: now,
+              frame_id: "map"
+            },
+            pose: {
+              position: {
+                x: sx,
+                y: sy,
+                z: sz
+              },
+              orientation: {
+                w: 1.0
+              }
+            }
+          });
+          move_base_listener.publish(PoseStamped);
+        }
+      </script>
+  </body>
+</html>
